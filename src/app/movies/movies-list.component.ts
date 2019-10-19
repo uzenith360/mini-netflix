@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MovieService } from '../shared/movies.service';
 
 @Component({
-    selector: 'app-movies-list',
     templateUrl: './movies-list.component.html',
     styles: [
         `section:after {

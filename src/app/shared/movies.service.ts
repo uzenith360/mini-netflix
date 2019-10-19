@@ -7,7 +7,13 @@ export class MovieService {
         return moviesList;
     }
 
-    searchMovies(searchTerm) {
-        return moviesList.filter(movie => movie.Title.substring(0, searchTerm.length).toLowerCase() === searchTerm.toLowerCase())
+    searchMovies(searchTerm: string) {
+        return moviesList.filter(
+            movie => movie.Title.substring(0, searchTerm.length).toLowerCase() === searchTerm.toLowerCase()
+        )
+    }
+
+    getMovie(imdbID: number) {
+        return moviesList.find(movie => movie.imdbID === imdbID);
     }
 }

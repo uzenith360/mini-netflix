@@ -23,6 +23,6 @@
                 <p><strong>imdbVotes:</strong> {{movie.imdbVotes}}</p>
                 <p><strong>imdbID:</strong> {{movie.imdbID}}</p>
                 <p><strong>Type:</strong> {{movie.Type}}</p>
-                <img *ngFor="let image of movie.Images" [image]="image" />
+                <img *ngFor="let image of movie.Images" [src]="image" />
         </div>
     </article>
