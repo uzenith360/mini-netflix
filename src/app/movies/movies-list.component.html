@@ -1,3 +1,4 @@
 <section>
+    <form><input type="text" (keyup)="this.searchMoviesList($event)"/></form>
     <app-movie-thumbnail [movie]="movie" *ngFor="let movie of movies"></app-movie-thumbnail>
 </section>
