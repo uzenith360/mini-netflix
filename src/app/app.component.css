@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+nav{
+    padding: .7rem;
+    background-color: firebrick;
+    color: #fff;
+    margin: 0;
+}
+main{
+    padding: .9rem;
+}
