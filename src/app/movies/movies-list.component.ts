@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import moviesList from 'src/assets/movies';
+import { Component } from '@angular/core';
+import { MovieService } from '../shared/movies.service';
 
 @Component({
     selector: 'app-movies-list',
@@ -19,11 +19,15 @@ import moviesList from 'src/assets/movies';
 })
 
 export class MovieListComponent {
-    movies = moviesList;
+    movies: any;
 
-    searchMoviesList (event: KeyboardEvent) {
-        const searchTerm =  (event.target as HTMLInputElement).value;
-        
-        this.movies = moviesList.filter(movie => movie.Title.substring(0, searchTerm.length).toLowerCase() === searchTerm.toLowerCase());
+    constructor (private movieService: MovieService) {
+        this.movies = this.movieService.getMovies();
+    }
+
+    searchMoviesList(event: KeyboardEvent) {
+        const searchTerm = (event.target as HTMLInputElement).value;
+
+        this.movies = this.movieService.searchMovies(searchTerm);
     }
 }

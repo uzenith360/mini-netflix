@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MovieListComponent } from './movies/movies-list.component';
 import { MovieThumbnailComponent } from './movies/movie-thumbnail.component';
 import { MovieThumbnailDetailComponent } from './movies/movie-thumbnail-detail.component';
+import { MovieService } from './shared/movies.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { MovieThumbnailDetailComponent } from './movies/movie-thumbnail-detail.c
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    MovieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

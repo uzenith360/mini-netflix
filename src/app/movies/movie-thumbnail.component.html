@@ -4,9 +4,6 @@
     </div>
     <div class="content-div">
             <p><strong>Title:</strong> {{movie.Title}}</p>
-            <p><strong>Rated:</strong> {{movie.Rated}}</p>
             <p><strong>Year:</strong> {{movie.Year}}</p>
-            <p><strong>Cast:</strong> <app-movie-thumbnail-detail [movieDetail]="movie.Actors.split(',')"></app-movie-thumbnail-detail></p>
-            <p><strong>Genres:</strong> <app-movie-thumbnail-detail [movieDetail]="movie.Genre.split(',')"></app-movie-thumbnail-detail></p>
     </div>
 </article>

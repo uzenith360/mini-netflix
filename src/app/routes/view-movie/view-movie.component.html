@@ -1,0 +1,28 @@
+<article>
+        <div class="img-div">
+           <img alt="{{movie.Title}}" src="{{movie.Images[0]}}" />
+        </div>
+        <div class="content-div">
+                <p><strong>Title:</strong> {{movie.Title}}</p>
+                <p><strong>Rated:</strong> {{movie.Rated}}</p>
+                <p><strong>Year:</strong> {{movie.Year}}</p>
+                <p><strong>Rated:</strong> {{movie.Rated}}</p>
+                <p><strong>Released:</strong> {{movie.Released}}</p>
+                <p><strong>Runtime:</strong> {{movie.Runtime}}</p>
+                <p><strong>Genres:</strong> <app-movie-thumbnail-detail [movieDetail]="movie.Genre"></app-movie-thumbnail-detail></p>
+                <p><strong>Director:</strong> {{movie.Director}}</p>
+                <p><strong>Writer:</strong> {{movie.Writer}}</p>
+                <p><strong>Actors:</strong> <app-movie-thumbnail-detail [movieDetail]="movie.Actors"></app-movie-thumbnail-detail></p>
+                <p><strong>Plot:</strong> {{movie.Plot}}</p>
+                <p><strong>Language:</strong> {{movie.Language}}</p>
+                <p><strong>Country:</strong> {{movie.Country}}</p>
+                <p><strong>Awards:</strong> {{movie.Awards}}</p>
+                <p><strong>Metascore:</strong> {{movie.Metascore}}</p>
+                <p><strong>imdbRating:</strong> {{movie.imdbRating}}</p>
+                <p><strong>imdbRating:</strong> {{movie.imdbRating}}</p>
+                <p><strong>imdbVotes:</strong> {{movie.imdbVotes}}</p>
+                <p><strong>imdbID:</strong> {{movie.imdbID}}</p>
+                <p><strong>Type:</strong> {{movie.Type}}</p>
+                <img *ngFor="let image of movie.Images" [image]="image" />
+        </div>
+    </article>

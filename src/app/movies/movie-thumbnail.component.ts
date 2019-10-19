@@ -8,7 +8,7 @@ import {Component, Input} from '@angular/core';
         `article {
             margin-bottom:2rem;
             margin-right:.5rem;
-            height:27rem;
+            height:17rem;
             background-color:blue;
             color:#fff;
             float: left;
