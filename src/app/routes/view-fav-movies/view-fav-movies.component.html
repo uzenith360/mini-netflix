@@ -1,4 +1,4 @@
-<article *ngFor="let movie of movies">
+<article *ngFor="let movie of movies" [routerLink]="['/movies', movie.imdbID]">
   <div class="img-div">
     <img alt="{{movie.Title}}" src="{{movie.Images[0]}}" />
   </div>
