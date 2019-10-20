@@ -25,6 +25,10 @@ import { Component, Input } from '@angular/core';
         img{
             width:100%;
         }
+        .favBtn-isFav{
+            background-color:darkred;
+            color:#fff;
+        }
         `
     ]
 })
@@ -40,15 +44,15 @@ export class MovieThumbnailComponent {
         const favBtn = (e.event.target as HTMLInputElement);
 
         if (this.storage.getItem(e.imdbID)) {
-            favBtn.disabled = false;
+            favBtn.classList.remove('favBtn-isFav');
             favBtn.innerHTML = 'Favorite';
 
             this.storage.removeItem(e.imdbID);
         } else {
-            favBtn.disabled = true;
+            favBtn.classList.add('favBtn-isFav');
             favBtn.innerHTML = 'Unfavorite';
 
-            this.storage.setItem(e.imdbID, '');
+            this.storage.setItem(e.imdbID, '1');
         }
     }
 }

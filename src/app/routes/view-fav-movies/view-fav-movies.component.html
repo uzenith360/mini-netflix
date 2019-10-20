@@ -1,0 +1,10 @@
+<article *ngFor="let movie of movies">
+  <div class="img-div">
+    <img alt="{{movie.Title}}" src="{{movie.Images[0]}}" />
+  </div>
+  <div class="content-div">
+    <p><strong>Title:</strong> {{movie.Title}}</p>
+    <p><strong>Year:</strong> {{movie.Year}}</p>
+  </div>
+</article>
+<p *ngIf="!movies.length">No favorite movies</p>

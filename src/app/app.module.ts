@@ -7,6 +7,7 @@ import { MovieListComponent } from './movies/movies-list.component';
 import { MovieThumbnailComponent } from './movies/movie-thumbnail.component';
 import { MovieThumbnailDetailComponent } from './movies/movie-thumbnail-detail.component';
 import { ViewMovieComponent } from './routes/view-movie/view-movie.component';
+import { ViewFavMoviesComponent } from './routes/view-fav-movies/view-fav-movies.component';
 import { MovieService } from './shared/movies.service';
 import { appRoutes } from '../routes';
 
@@ -16,7 +17,8 @@ import { appRoutes } from '../routes';
     MovieListComponent,
     MovieThumbnailComponent,
     MovieThumbnailDetailComponent,
-    ViewMovieComponent
+    ViewMovieComponent,
+    ViewFavMoviesComponent
   ],
   imports: [
     BrowserModule,

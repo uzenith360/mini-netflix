@@ -20,7 +20,7 @@ import { MovieService } from '../shared/movies.service';
 export class MovieListComponent {
     movies: any;
 
-    constructor (private movieService: MovieService) {
+    constructor(private movieService: MovieService) {
         this.movies = this.movieService.getMovies();
     }
 

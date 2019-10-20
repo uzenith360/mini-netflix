@@ -1,10 +1,11 @@
 <article [routerLink]="['/movies', movie.imdbID]">
-    <div class="img-div">
-       <img alt="{{movie.Title}}" src="{{movie.Images[0]}}" />
-    </div>
-    <div class="content-div">
-            <p><strong>Title:</strong> {{movie.Title}}</p>
-            <p><strong>Year:</strong> {{movie.Year}}</p>
-            <button [disabled]="!!this.storage.getItem(movie.imdbID)" (click)="this.toggleFavorite({event:$event, imdbID: movie.imdbID})">Favorite</button>
-    </div>
+  <div class="img-div">
+    <img alt="{{movie.Title}}" src="{{movie.Images[0]}}" />
+  </div>
+  <div class="content-div">
+    <p><strong>Title:</strong> {{movie.Title}}</p>
+    <p><strong>Year:</strong> {{movie.Year}}</p>
+    <button [ngClass]="{'favBtn-isFav':!!this.storage.getItem(movie.imdbID)}"
+      (click)="this.toggleFavorite({event:$event, imdbID: movie.imdbID})">{{!!this.storage.getItem(movie.imdbID)?'Unfavorite':'Favorite'}}</button>
+  </div>
 </article>
