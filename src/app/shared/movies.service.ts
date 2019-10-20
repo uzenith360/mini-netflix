@@ -13,7 +13,7 @@ export class MovieService {
         )
     }
 
-    getMovie(imdbID: number) {
+    getMovie(imdbID: string) {
         return moviesList.find(movie => movie.imdbID === imdbID);
     }
 }

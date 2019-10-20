@@ -1,9 +1,10 @@
-<article>
+<article [routerLink]="['/movies', movie.imdbID]">
     <div class="img-div">
        <img alt="{{movie.Title}}" src="{{movie.Images[0]}}" />
     </div>
     <div class="content-div">
             <p><strong>Title:</strong> {{movie.Title}}</p>
             <p><strong>Year:</strong> {{movie.Year}}</p>
+            <button>Make Favorite</button>
     </div>
 </article>
