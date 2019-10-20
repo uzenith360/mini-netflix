@@ -5,6 +5,6 @@
     <div class="content-div">
             <p><strong>Title:</strong> {{movie.Title}}</p>
             <p><strong>Year:</strong> {{movie.Year}}</p>
-            <button>Make Favorite</button>
+            <button [disabled]="!!this.storage.getItem(movie.imdbID)" (click)="this.toggleFavorite({event:$event, imdbID: movie.imdbID})">Favorite</button>
     </div>
 </article>

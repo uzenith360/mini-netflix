@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 
 @Component({
@@ -31,4 +31,24 @@ import {Component, Input} from '@angular/core';
 
 export class MovieThumbnailComponent {
     @Input() movie: any;
+
+    storage = sessionStorage;
+
+    toggleFavorite(e) {
+        e.event.stopPropagation();
+
+        const favBtn = (e.event.target as HTMLInputElement);
+
+        if (this.storage.getItem(e.imdbID)) {
+            favBtn.disabled = false;
+            favBtn.innerHTML = 'Favorite';
+
+            this.storage.removeItem(e.imdbID);
+        } else {
+            favBtn.disabled = true;
+            favBtn.innerHTML = 'Unfavorite';
+
+            this.storage.setItem(e.imdbID, '');
+        }
+    }
 }
