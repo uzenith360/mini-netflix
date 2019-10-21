@@ -14,3 +14,6 @@ The app has 3 pages:
 /movies: The movies route to view all movies, clicking on a particular movie takes you to the movie details page
 /movies/id: The specific movie route to view information about a particular movie
 /favs: The favs route to view movies that you marked as favorite
+
+The app is hosted on netlify and can be assessed with this link:
+#https://admiring-leavitt-4ce7d3.netlify.com/movies
