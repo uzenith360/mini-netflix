@@ -118,8 +118,17 @@
               "devServerTarget": "mini-netflix:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/mini-netflix",
+            "netlifyToken": "ee3b36915756892f9fe3d941b428e74d5060b9729e3ed522cdc060b3e1756749",
+            "siteId": "388d9424-4d14-4266-935a-1255a378d63e"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "mini-netflix"
 }
