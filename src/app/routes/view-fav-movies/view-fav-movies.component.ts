@@ -12,7 +12,12 @@ import { MovieService } from 'src/app/shared/movies.service';
             background-color:blue;
             color:#fff;
             float: left;
-            width: 20%;
+            width: 100%;
+        }
+        @media only screen and (min-width: 768px) {
+            article {
+                width: 20%;
+            }
         }
         .content-div{
             padding:.6rem;

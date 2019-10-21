@@ -7,9 +7,14 @@ import { ActivatedRoute } from '@angular/router';
     styles: [
         `
         article{
-            width:30%;
+            width:100%;
             display:table;
             margin:0 auto;
+        }
+        @media only screen and (min-width: 768px) {
+            article {
+                width: 30%;
+            }
         }
         .content-div{
             padding:.6rem;
