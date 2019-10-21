@@ -1,5 +1,6 @@
 <section>
-    <form><input type="text" (keyup)="this.searchMoviesList($event)"/></form>
+    <form><input type="text" placeholder="Search for movie" (keyup)="this.searchMoviesList($event)"/></form>
     <app-movie-thumbnail [movie]="movie" *ngFor="let movie of movies"></app-movie-thumbnail>
+    <p *ngIf="!movies.length">No movies found</p>
 </section>
 <button [routerLink]="['/favs']">Go to Favorites</button>
